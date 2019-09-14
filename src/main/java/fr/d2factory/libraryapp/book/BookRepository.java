@@ -8,7 +8,6 @@ import java.util.Map;
  * The book repository emulates a database via 2 HashMaps
  */
 public class BookRepository {
-    //private Map<ISBN, Book> availableBooks = new HashMap<>();
     private Map<Long, Book> availableBooks = new HashMap<>();
     private Map<Book, LocalDate> borrowedBooks = new HashMap<>();
 
@@ -19,7 +18,6 @@ public class BookRepository {
     }
 
     public Book findBook(long isbnCode) {
-        //ISBN isbn = new ISBN(isbnCode);
         return availableBooks.get(isbnCode);
     }
 
